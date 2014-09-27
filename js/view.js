@@ -1,9 +1,11 @@
+
 /*
- __  __     __     ______     __  __        ______   __  __     __   __   ______    
-/\ \_\ \   /\ \   /\  ___\   /\ \_\ \      /\  ___\ /\ \_\ \   /\ \ / /  /\  ___\   
-\ \  __ \  \ \ \  \ \ \__ \  \ \  __ \     \ \  __\ \ \____ \  \ \ \'/   \ \  __\   
- \ \_\ \_\  \ \_\  \ \_____\  \ \_\ \_\     \ \_\    \/\_____\  \ \__|    \ \_____\ 
-  \/_/\/_/   \/_/   \/_____/   \/_/\/_/      \/_/     \/_____/   \/_/      \/_____/ 
+ __  __     __     ______     __  __        ______   __  __     __   __   ______     ______    
+/\ \_\ \   /\ \   /\  ___\   /\ \_\ \      /\  ___\ /\ \_\ \   /\ \ / /  /\  ___\   /\  ___\   
+\ \  __ \  \ \ \  \ \ \__ \  \ \  __ \     \ \  __\ \ \____ \  \ \ \'/   \ \  __\   \ \___  \  
+ \ \_\ \_\  \ \_\  \ \_____\  \ \_\ \_\     \ \_\    \/\_____\  \ \__|    \ \_____\  \/\_____\ 
+  \/_/\/_/   \/_/   \/_____/   \/_/\/_/      \/_/     \/_____/   \/_/      \/_____/   \/_____/ 
+                                                                                               
 */
                                                                                     
 if (!window.Fyve) {
@@ -22,7 +24,16 @@ Fyve.Views = {};
   or the chooseYourFyve screen.
 */
 Fyve.Views.welcome = function () {
-  return '<h1>Welcome</h1>';
+  return (
+    '<div class="welcome-container">' +
+      '<div class="hand-right"><img src="assets/intro-right.png"></div>' +
+      '<div class="hand-left"><img src="assets/intro-left.png"></div>' +
+      '<div class="logo hidden"><img src="assets/logo-stacked.png"></div>' +
+      '<div class="button enter hidden" data-next="true">' +
+        '<div class="button-inner yellow"><h2>Enter</h2></div>' +
+      '</div>' +
+    '</div>'
+  );
 };
 
 
@@ -35,7 +46,10 @@ Fyve.Views.welcome = function () {
   fyvee.
 */
 Fyve.Views.chooseYourFyve = function () {
-  return '<h1>Choose Your Fyve</h1>';
+  return (
+    '<h1 data-next="true">Choose Your Fyve</h1>' +
+    '<div class="waiting"><div class="gradient"></div><img src="assets/waiting-blue.png"></div>'
+  );
 };
 
 
@@ -48,7 +62,7 @@ Fyve.Views.chooseYourFyve = function () {
   high fyve.
 */
 Fyve.Views.soAlone = function () {
-  return '<h1>So Alone</h1>';
+  return '<h1 data-next="true">So Alone</h1>';
 };
 
 
@@ -72,7 +86,7 @@ Fyve.Views.soAlone = function () {
     "fyver" or "fyvee".
 */
 Fyve.Views.readyTofyve = function (fyveRole) {
-  return '<h1>Ready to Five</h1>';
+  return '<h1 data-next="true">Ready to fyve</h1>';
 };
 
 /*
@@ -87,5 +101,6 @@ Fyve.Views.readyTofyve = function (fyveRole) {
 */
 
 Fyve.Views.niceBro = function () {
-  return '<h1>Nice Bro</h1>';
+  return '<h1 data-next="false">Nice Bro</h1>';
 }
+
