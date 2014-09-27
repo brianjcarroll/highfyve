@@ -22,7 +22,7 @@ Fyve.Views = {};
   or the chooseYourFyve screen.
 */
 Fyve.Views.welcome = function () {
-
+  return '<h1>Welcome</h1>';
 };
 
 
@@ -35,7 +35,7 @@ Fyve.Views.welcome = function () {
   fyvee.
 */
 Fyve.Views.chooseYourFyve = function () {
-
+  return '<h1>Choose Your Fyve</h1>';
 };
 
 
@@ -48,7 +48,7 @@ Fyve.Views.chooseYourFyve = function () {
   high fyve.
 */
 Fyve.Views.soAlone = function () {
-
+  return '<h1>So Alone</h1>';
 };
 
 
@@ -72,7 +72,7 @@ Fyve.Views.soAlone = function () {
     "fyver" or "fyvee".
 */
 Fyve.Views.readyTofyve = function (fyveRole) {
-
+  return '<h1>Ready to Five</h1>';
 };
 
 /*
@@ -87,5 +87,5 @@ Fyve.Views.readyTofyve = function (fyveRole) {
 */
 
 Fyve.Views.niceBro = function () {
-
+  return '<h1>Nice Bro</h1>';
 }
