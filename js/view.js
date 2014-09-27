@@ -47,8 +47,18 @@ Fyve.Views.welcome = function () {
 */
 Fyve.Views.chooseYourFyve = function () {
   return (
-    '<h1 data-next="true">Choose Your Fyve</h1>' +
-    '<div class="waiting"><div class="gradient"></div><img src="assets/waiting-blue.png"></div>'
+    '<div class="fivee">' +
+      '<h1>Fyver</h1>' +
+      '<p>Wait to receive<br>an epic high fyve.</p>' +
+      '<div class="hand"><img src="assets/intro-right.png"></div>' +
+      '<div class="button" data-next="true" data-role="fivee"><div class="button-inner yellow"><h2>Go</h2></div></div>' +
+    '</div>' +
+    '<div class="fiver">' +
+      '<h1>Fyver</h1>' +
+      "<p>Go give the world's most<br>epic high fyve.</p>" +
+      '<div class="hand"><img src="assets/intro-left.png"></div>' +
+      '<div class="button" data-next="true" data-role="fiver"><div class="button-inner orange"><h2>Go</h2></div></div>' +
+    '</div>'
   );
 };
 
@@ -62,7 +72,7 @@ Fyve.Views.chooseYourFyve = function () {
   high fyve.
 */
 Fyve.Views.soAlone = function () {
-  return '<h1 data-next="true">So Alone</h1>';
+  return '<div class="waiting centered"><div class="gradient"></div><img src="assets/waiting-blue.png"></div></div>';
 };
 
 
@@ -86,7 +96,25 @@ Fyve.Views.soAlone = function () {
     "fyver" or "fyvee".
 */
 Fyve.Views.readyTofyve = function (fyveRole) {
-  return '<h1 data-next="true">Ready to fyve</h1>';
+  if (Fyve.role == 'fivee') {
+    return (
+      '<div class="user-wrapper">' +
+        '<h2>@foleyatwork</h2>' +
+        '<p>300ft away.</p>' +
+        '<div class="map"><img src="assets/map.png"></div>' +
+        '<div class="button" data-next="true" data-success="true"><div class="button-inner yellow"><h2>Nice, Bro!</h2></div></div>' +
+        '<div class="button" data-next="true" data-success="false"><div class="button-inner orange"><h2>Left me Hanging</h2></div></div>' +
+      '</div>'
+    );
+  } else {
+      '<div class="user-wrapper">' +
+        '<h2>@thefatling</h2>' +
+        '<p>300ft away.</p>' +
+        '<h3>Stay put. Your high five is on the way.</h3>' +
+        '<div class="button" data-next="true" data-success="true"><div class="button-inner yellow"><h2>Nice, Bro!</h2></div></div>' +
+        '<div class="button" data-next="true" data-success="false"><div class="button-inner orange"><h2>Left me Hanging</h2></div></div>' +
+      '</div>'
+  }
 };
 
 /*
@@ -101,6 +129,16 @@ Fyve.Views.readyTofyve = function (fyveRole) {
 */
 
 Fyve.Views.niceBro = function () {
-  return '<h1 data-next="false">Nice Bro</h1>';
+  if (Fyve.success === "true") {
+    return (
+      '<h1>Success!</h1>' +
+      '<div class="refresh"></div>'
+    );
+  } else {
+    return (
+      '<h1>Lame, dude.</h1>' +
+      '<div class="refresh"></div>'
+    );
+  }
 }
 

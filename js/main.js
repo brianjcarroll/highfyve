@@ -62,17 +62,39 @@ $(function () {
     var next = $('[data-next]');
 
     next.on('click', function () {
-      console.log('test');
-      if (next.attr('data-next') === 'false') {
+      if (this.getAttribute('data-next') === 'false') {
         current = 0;
       } else {
         current++;
+      }
+
+      if (this.getAttribute('data-role')) {
+        Fyve.role = this.getAttribute('data-role');
+      }
+
+      if (this.getAttribute('data-success')) {
+        Fyve.success = this.getAttribute('data-success');
       }
 
       changeState(route[current]);
     });
 
     animations();
+
+    if (current == 2) {
+      setTimeout(function () {
+        current++;
+        changeState(route[current]);
+      }, 2000);
+    }
+
+    if ($('.refresh') && current == 4) {
+      current = 0;
+
+      setTimeout(function () {
+        changeState(route[current]);
+      }, 2000);
+    }
   }
 
   function animations () {

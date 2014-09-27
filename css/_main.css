@@ -104,16 +104,16 @@ a:hover {
   background-position: 0 0;
 }
 .button .button-inner.orange {
-  background-position: 0 -148px;
+  background-position: 0 50%;
 }
 .button .button-inner.purple {
-  background-position: 0 -222px;
+  background-position: 0 75%;
 }
 .button .button-inner.blue {
-  background-position: 0 -296px;
+  background-position: 0 100%;
 }
 .button .button-inner.yellow {
-  background-position: 0 -74px;
+  background-position: 0 25%;
 }
 .button .button-inner.yellow h2 {
   color: black;
@@ -142,6 +142,12 @@ a:hover {
   z-index: -1;
   -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
           transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.welcome-container .logo.hidden {
+  -webkit-transform: scale(0.2);
+      -ms-transform: scale(0.2);
+          transform: scale(0.2);
+  opacity: 0;
 }
 .hand-left,
 .hand-right {
@@ -174,6 +180,13 @@ a:hover {
   overflow: hidden;
   position: relative;
   width: 100%;
+}
+.waiting.centered {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 .waiting .gradient {
   -webkit-animation: spin 1.5s infinite linear;
@@ -214,4 +227,41 @@ a:hover {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+/* Choose Your Five */
+.fivee,
+.fiver {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0;
+  top: 0;
+  padding: 0 2em;
+  min-height: 240px;
+}
+.fivee .hand,
+.fiver .hand {
+  position: absolute;
+  width: 40%;
+  top: 20px;
+  right: 0;
+}
+.fivee .hand img,
+.fiver .hand img {
+  max-width: 100%;
+}
+.fiver {
+  top: 53%;
+  text-align: right;
+  background-color: #9b89d3;
+}
+.fiver .hand {
+  left: 0;
+}
+/* Map */
+.map img {
+  width: 100%;
+}
+.user-wrapper h2 {
+  margin: 0;
 }
