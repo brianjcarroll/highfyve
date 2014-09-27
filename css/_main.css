@@ -1,0 +1,37 @@
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+html {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+html *,
+html *:before,
+html *:after {
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+body {
+  font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+.yellow {
+  color: #ffcf2c;
+}
+.orange {
+  color: #ff981f;
+}
+.blue {
+  color: #54c0e1;
+}
+.purple {
+  color: #9b89d3;
+}
+.black {
+  color: #072c2e;
+}
