@@ -137,7 +137,7 @@ Fyve.Views.readyTofyve = function (fyveRole) {
 Fyve.Views.niceBro = function () {
   if (Fyve.success === "true") {
     return (
-      '<h1 class="confirmation">Cowabunga!</h1>' +
+      '<h1 class="confirmation">Sweet!</h1>' +
       '<div class="refresh"></div>' +
       '<div class="flaming-hand"><img src="static/assets/chrushed-it.gif"></div>'
     );
