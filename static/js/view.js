@@ -101,7 +101,12 @@ Fyve.Views.readyTofyve = function (fyveRole) {
       '<div class="user-wrapper">' +
         '<h2>@foleyatwork</h2>' +
         '<p>300ft away. Stay put and wait to be high fived.</p>' +
-        '<div class="map"><img src="static/assets/map.png"></div>' +
+        '<div class="gallery">' +
+          '<div class="slide"><img src="static/assets/protip-stand-up.png"></div>' +
+          '<div class="slide"><img src="static/assets/protip-arm-up.png"></div>' +
+          '<div class="slide"><img src="static/assets/protip-smile.png"></div>' +
+          '<div class="slide"><img src="static/assets/map.png"></div>' +
+        '</div>' +
         '<div class="button" data-next="true" data-success="true"><div class="button-inner yellow"><h2>Nice, Bro!</h2></div></div>' +
         '<div class="button" data-next="true" data-success="false"><div class="button-inner orange"><h2>Left me Hanging</h2></div></div>' +
       '</div>'

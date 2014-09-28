@@ -8,8 +8,8 @@ module.exports = function(grunt) {
           {
             expand: false,
             flatten: false,
-            src: [ 'css/*.less' ],
-            dest: 'css/_main.css'
+            src: [ 'static/css/*.less' ],
+            dest: 'static/css/_main.css'
           }
         ]
       }
@@ -19,8 +19,8 @@ module.exports = function(grunt) {
       multiple_files: {
         expand: true,
         flatten: true,
-        src: 'css/*.css',
-        dest: 'css'
+        src: 'static/css/*.css',
+        dest: 'static/css'
       }
     }
   });
