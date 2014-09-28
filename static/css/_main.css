@@ -208,6 +208,24 @@ a:hover {
   display: block;
   width: 100%;
 }
+.waiting .hand {
+  position: absolute;
+  overflow: hidden;
+  background-image: url('../../static/assets/hand-default-color.png');
+  background-size: 100% 200%;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.waiting .hand.yellow {
+  background-position: 0 0;
+}
+.waiting .hand.orange {
+  background-position: 0 50%;
+}
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -264,8 +282,8 @@ a:hover {
   padding-bottom: 150%;
   overflow: hidden;
   position: relative;
-  margin-left: -2em;
-  margin-right: -2em;
+  /*margin-left: -2em;
+  margin-right: -2em;*/
 }
 .gallery .slide {
   background-color: #54c0e1;

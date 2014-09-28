@@ -215,6 +215,20 @@ a {
     display: block;
     width: 100%;
   }
+
+  .hand {
+    position: absolute;
+    overflow: hidden;
+    background-image: url('../../static/assets/hand-default-color.png');
+    background-size: 100% 200%;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.yellow { background-position: 0 0; }
+    &.orange { background-position: 0 50%; }
+  }
 }
 
 @keyframes spin {
@@ -264,8 +278,8 @@ a {
   padding-bottom: 150%;
   overflow: hidden;
   position: relative;
-  margin-left: -2em;
-  margin-right: -2em;
+  /*margin-left: -2em;
+  margin-right: -2em;*/
 
   .slide {
     background-color: @blue;
