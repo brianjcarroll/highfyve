@@ -138,12 +138,14 @@ Fyve.Views.niceBro = function () {
   if (Fyve.success === "true") {
     return (
       '<h1>Success!</h1>' +
-      '<div class="refresh"></div>'
+      '<div class="refresh"></div>' +
+      '<div class="hand"><img src="static/assets/chrushed-it.gif"></div>'
     );
   } else {
     return (
       '<h1>Lame, dude.</h1>' +
-      '<div class="refresh"></div>'
+      '<div class="refresh"></div>' +
+      '<div class="hand"><img src="static/assets/left-hanging.gif"></div>'
     );
   }
 }
